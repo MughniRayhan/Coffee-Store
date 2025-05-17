@@ -6,11 +6,24 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router";
+import MainLayout from './Layouts/MainLayout.jsx';
+import AddCoffee from './Components/AddCoffee.jsx';
+import Home from './Components/Home.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello World</div>,
+  Component: MainLayout,
+  children: [
+    {
+      index: true, 
+      path: '/', 
+      loader: () => fetch('http://localhost:3000/coffees'),
+      hydrateFallbackElement: <h1>...Loding</h1>,
+      Component: Home
+    },
+    {path: '/add', Component: AddCoffee},
+  ]
   },
 ]);
 
