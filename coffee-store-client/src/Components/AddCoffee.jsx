@@ -32,7 +32,7 @@ function AddCoffee() {
   return (
     <div className='py-[137px]'>
         <div className='max-w-7xl mx-auto md:px-[112px] py-[70px] bg-[#F4F3F0]'>
-            <h1 className='text-4xl text-[#374151] text-center'>Add Coffee</h1>
+            <h1 className='text-4xl text-[#374151] text-center rancho'>Add Coffee</h1>
             <p className='text-sm md:text-lg my-[32px] text-center text-[#1B1A1A]/[70%] w-[89%]'>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
 
             <form onSubmit={handleAddCoffee} className='w-full'>
@@ -79,7 +79,7 @@ function AddCoffee() {
                  />
                  </fieldset>
 
-                 <input type="submit" className="w-full mt-5 bg-[#D2B48C] text-xl text-[#331A15] py-[13px] rounded-xl"   value="Add Coffee" />
+                 <input type="submit" className="w-full mt-5 bg-[#D2B48C] text-xl text-[#331A15] py-[13px] rounded-xl rancho"   value="Add Coffee" />
             </form>
         </div>
     </div>
