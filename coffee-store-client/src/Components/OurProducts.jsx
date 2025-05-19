@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useLoaderData } from 'react-router';
 import CoffeCard from './CoffeCard';
 
 function OurProducts() {
-     const coffees = useLoaderData();
+     const initialCoffees = useLoaderData();
+     const [coffees, setCoffees] =useState(initialCoffees);
   return (
     <div className='bg-[url("https://i.ibb.co/DDbFHfvk/1.png")] bg-cover bg-no-repeat '>
         <div className='mt-[120px] text-center max-w-7xl mx-auto p-4'>
@@ -13,7 +14,7 @@ function OurProducts() {
           <div  className='grid grid-cols-1 md:grid-cols-2 gap-5 '>
             {
               coffees.map(coffee => (
-                <CoffeCard key={coffee._id} coffee={coffee}/>
+                <CoffeCard key={coffee._id} coffee={coffee} setCoffees={setCoffees} coffees={coffees}/>
               ))
             }
           </div>
