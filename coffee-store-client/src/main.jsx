@@ -11,18 +11,25 @@ import AddCoffee from './Components/AddCoffee.jsx';
 import Home from './Components/Home.jsx';
 import CoffeeDetails from './Components/CoffeeDetails.jsx';
 import UpdateCoffee from './Components/UpdateCoffee.jsx';
+import ErrorPage from './Components/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
   Component: MainLayout,
+  
   children: [
     {
       index: true, 
       path: '/', 
       loader: () => fetch('http://localhost:3000/coffees'),
       hydrateFallbackElement: <h1>...Loding</h1>,
-      Component: Home
+      Component: Home,
+      
+    },
+    {
+      path: '/*',
+      Component: ErrorPage,
     },
     {
       path: '/add', 
