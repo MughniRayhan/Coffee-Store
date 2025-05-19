@@ -33,13 +33,13 @@ function UpdateCoffee() {
         })
     }
   return (
-    <div className=' bg-[url("https://i.ibb.co/PGs7WVtP/11.png")] bg-no-repeat md:px-[112px] pb-[120px]'>
+    <div className=' bg-[url("https://i.ibb.co/PGs7WVtP/11.png")] bg-no-repeat md:px-[112px] pb-[120px] px-4'>
        <Link to='/' className='flex items-center gap-2 text-[#374151] text-2xl rancho py-[50px]'>
          <IoMdArrowBack/>
         <h3>Back to home</h3>
        </Link>
-        <div className='max-w-7xl mx-auto md:px-[112px] py-[70px] bg-[#F4F3F0]'>
-            <h1 className='text-4xl text-[#374151] text-center rancho text-shadow-lg/25'>Update Existing Coffee Details</h1>
+        <div className='max-w-7xl mx-auto md:px-[112px] px-4 py-[70px] bg-[#F4F3F0]'>
+            <h1 className='text-4xl text-[#374151] text-center rancho text-shadow-lg/35'>Update Existing Coffee Details</h1>
             <p className='text-sm md:text-lg my-[32px] text-center text-[#1B1A1A]/[70%] w-[89%]'>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
 
             <form onSubmit={handleUpdateCoffee} className='w-full'>
