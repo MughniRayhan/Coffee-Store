@@ -9,6 +9,7 @@ import {
 import MainLayout from './Layouts/MainLayout.jsx';
 import AddCoffee from './Components/AddCoffee.jsx';
 import Home from './Components/Home.jsx';
+import CoffeeDetails from './Components/CoffeeDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,15 @@ const router = createBrowserRouter([
       hydrateFallbackElement: <h1>...Loding</h1>,
       Component: Home
     },
-    {path: '/add', Component: AddCoffee},
+    {
+      path: '/add', 
+      Component: AddCoffee
+    },
+    {
+      path: '/coffees/:id',
+      Component:CoffeeDetails,
+      loader: ({params}) => fetch(`http://localhost:3000/coffees/${params.id}`),
+    }
   ]
   },
 ]);

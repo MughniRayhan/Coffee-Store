@@ -2,6 +2,7 @@ import React from 'react'
 import { IoEye } from "react-icons/io5";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
+import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 
 function CoffeCard({coffee}) {
@@ -51,7 +52,7 @@ function CoffeCard({coffee}) {
             </div>
 
             <div className='flex md:flex-col gap-4'>
-                <div className='bg-[#D2B48C] p-3 text-white rounded'><IoEye /></div>
+              <Link to={`/coffees/${_id}`}><div className='bg-[#D2B48C] p-3 text-white rounded'><IoEye /></div></Link>
                <div  className='bg-[#3C393B] p-3 text-white rounded'><MdEdit/></div>
                <div  className='bg-[#EA4744] p-3 text-white rounded' onClick={()=>handleDelete(_id)}><MdDelete/></div>
             </div>
