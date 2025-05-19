@@ -53,7 +53,7 @@ function CoffeCard({coffee}) {
 
             <div className='flex md:flex-col gap-4'>
               <Link to={`/coffees/${_id}`}><div className='bg-[#D2B48C] p-3 text-white rounded'><IoEye /></div></Link>
-               <div  className='bg-[#3C393B] p-3 text-white rounded'><MdEdit/></div>
+              <Link to={`/update/${_id}`}> <div  className='bg-[#3C393B] p-3 text-white rounded'><MdEdit/></div></Link>
                <div  className='bg-[#EA4744] p-3 text-white rounded' onClick={()=>handleDelete(_id)}><MdDelete/></div>
             </div>
            
